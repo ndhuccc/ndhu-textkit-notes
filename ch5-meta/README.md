@@ -90,20 +90,45 @@ ch5-meta/
 ## ⚠️ 常見誤解
 
 （學生最常踩的點）
+
+---
+
+## 圖
+
+![圖 5.X：<caption>](assets/fig5.X_xxx.jpg)
 ```
+
+> **關於摘要表**：5 行摘要表是給**純文字檔閱讀**用的（一眼能抓到 KP 在講什麼）。
+> 但 `inject_kps.py` 注入到 HTML 互動講義時會**自動移除摘要表**（避免與下方 💡 一句話 H4 內容重複）。
+> 所以 KP 短稿**必須保留摘要表**，但 HTML 部署後只會看到 7 個要素 + 課本附圖。
 
 **規則速查**：
 
 | 元素 | 規範 |
 |---|---|
 | H1 | 全檔只有 1 個：`# KP-S?-?｜<標題>` |
-| 摘要表 | 緊接 H1、5 行：一句話／類比／公式／口訣／誤解 |
-| H2 | 固定 7 個、emoji 必須齊：`💡 🎭 📐 🔢 🤫 🎯 ⚠️` |
+| 摘要表 | 緊接 H1、5 行：一句話／類比／公式／口訣／誤解（純文字檔閱讀用；HTML 注入時自動移除） |
+| H2 | 7 個核心要素 + 可選 1 個「## 圖」段；核心要素 emoji 必須齊：`💡 🎭 📐 🔢 🤫 🎯 ⚠️` |
 | 分隔 | 要素間用 `---` |
 | 標頭 | 類比要素標題附帶類比名：`## 🎭 類比（老師帶學生）` |
 | 對應理由 | 類比段落必含 `**對應理由**：` 標頭（AUDIT #57 強制） |
+| 課本附圖 | `## 圖` 段放最後，內含 `![caption](assets/fig5.X_xxx.jpg)`；無對應圖放 placeholder 文字 |
 | blockquote | 行數 ≤ 30%（禁止純 `>` 寫整段） |
 | 每段長度 | 每個 H2 區塊 ≤ 800 字 |
+
+**KP↔課本 fig 對映**（ch5）：
+
+| KP | 對映 fig |
+|---|---|
+| KP-S1-1, S1-2 | fig5.1_peaking.jpg（Peaking 現象） |
+| KP-S2-1, S2-2 | fig5.2_hypothesis.jpg（假設檢定接受/拒絕區間） |
+| KP-S3-1 | fig5.3_roc.jpg（ROC 曲線） |
+| KP-S4-1, S4-2 | fig5.5_scatter.jpg（$J_3$ 三種情況） |
+| KP-S4-3 | fig5.6_fisher.jpg（Fisher 投影方向） |
+| KP-S6-1 | fig5.7_projection.jpg（投影導致類別重疊） |
+| KP-S9-1 | fig5.9_srm_tradeoff.jpg（SRM 權衡） |
+| KP-S9-2 | fig5.8_srm.jpg（SRM 概念圖） |
+| 其他 10 個 KP | 無對應課本 fig |
 
 **稽核工具**：`textkit-explain/scripts/check_kp_format.py`
 
