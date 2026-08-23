@@ -20,6 +20,7 @@ on:
       - 'ch*/katex/**'
       - 'ch*/assets/**'
       - 'ch*/requirements.txt'
+      - 'ch5-meta/**'
       - 'README.md'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
