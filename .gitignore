@@ -22,3 +22,11 @@ build_*.py
 build_html.py
 build_map.py
 inject_kps.py
+
+# 製作過程 metadata（不該到公開版）
+_atomic_plan.json
+map.json
+career.json
+kp_drafts/
+diagram_prompts/
+sources/

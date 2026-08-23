@@ -1,0 +1,5 @@
+numpy
+matplotlib
+scipy
+jupyter
+# scipy 用於 t 分布查表（stats.t.ppf）；其餘全為純 NumPy 手刻
