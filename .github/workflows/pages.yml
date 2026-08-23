@@ -1,0 +1,85 @@
+# GitHub Pages 自動部署
+#
+# 觸發：push 到 main、manual dispatch、每週一 06:00 校時（確認仍能部署）
+# 來源：repo 根目錄（index.html + ch1/, ch2/, ch3/, ch4/, ch7/）
+# 部署：透過官方 actions/deploy-pages@v4 推送到 GitHub Pages
+#
+# 注意：
+# 1. repo 必須先在 Settings → Pages 啟用 "GitHub Actions" 為 source
+#    （Settings → Pages → Source → GitHub Actions）
+# 2. Pages 啟用後，本檔 push 會自動觸發部署
+# 3. 若首次部署失敗，先手動去 Settings → Pages 確認 source 已切換
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'ch*/index.html'
+      - 'ch*/katex/**'
+      - 'ch*/assets/**'
+      - 'ch*/requirements.txt'
+      - 'README.md'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+  schedule:
+    # 每週一 06:00 UTC 校時，確認部署仍正常（13:00 台北）
+    - cron: '0 6 * * 1'
+
+# 防止舊部署被新部署排擠 + 允許同時觸發多個部署
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+# 部署只允許 main
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Pages
+        id: setup
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 直接打包整個 repo 根目錄（靜態檔案已就位、無 build step）
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Summary
+        if: success()
+        run: |
+          echo "## 🚀 部署成功" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **頁面網址**：${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit**：${{ github.event.head_commit.message }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **作者**：${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "可訪問路徑：" >> $GITHUB_STEP_SUMMARY
+          echo "- https://mitlab323.github.io/textkit-notes/" >> $GITHUB_STEP_SUMMARY
+          echo "- https://mitlab323.github.io/textkit-notes/ch1/" >> $GITHUB_STEP_SUMMARY
+          echo "- https://mitlab323.github.io/textkit-notes/ch2/" >> $GITHUB_STEP_SUMMARY
+          echo "- https://mitlab323.github.io/textkit-notes/ch3/" >> $GITHUB_STEP_SUMMARY
+          echo "- https://mitlab323.github.io/textkit-notes/ch4/" >> $GITHUB_STEP_SUMMARY
+          echo "- https://mitlab323.github.io/textkit-notes/ch7/" >> $GITHUB_STEP_SUMMARY

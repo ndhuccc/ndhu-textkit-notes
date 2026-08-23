@@ -1,0 +1,24 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Build / tool artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+*.log
+.tmp/
+.cache/
+
+# 互動講義的本地工具腳本（不需要推到公開版）
+rebuild_*.py
+build_*.py
+build_html.py
+build_map.py
+inject_kps.py
