@@ -1,0 +1,98 @@
+# ch5-meta｜Ch5 textkit-explain 的製作素材
+
+> 這是 Ch5（特徵選擇）textkit-explain 版的「半透明後台」：
+> 把 `ch5/` 互動講義背後的 **21 個原子知識點（KP）短稿** 與 **10 個示意圖 prompt** 整理公開，
+> 讓讀者能看見「這份講義是怎麼寫出來的」。
+
+---
+
+## 📁 內容
+
+```
+ch5-meta/
+├─ kp_drafts/             ← 21 個原子 KP 精簡短稿（11 站 × 2–4 KP）
+│  ├─ S00/KP-S0-1.md … KP-S0-2.md    ← 站 0：為什麼選特徵
+│  ├─ S01/KP-S1-1.md … KP-S1-2.md    ← 站 1：Peaking 現象
+│  ├─ S02/… KP-S2-1 … KP-S2-2       ← 站 2：t-test
+│  ├─ …
+│  └─ S10/KP-S10-1.md … KP-S10-2.md  ← 站 10：BIC
+│
+└─ diagram_prompts/       ← 10 個示意圖 prompt（sketchnote 風格、16:9）
+   ├─ KP-S0-1.md  ← 維度詛咒與 N/l 比
+   ├─ KP-S1-1.md  ← Peaking 曲線
+   ├─ KP-S2-2.md  ← t-test q 統計量
+   ├─ KP-S3-1.md  ← ROC 曲線
+   ├─ KP-S4-2.md  ← 散佈矩陣 J3
+   ├─ KP-S5-1.md  ← SFS 子集選擇
+   ├─ KP-S7-1.md  ← 離群值
+   ├─ KP-S8-1.md  ← 隱藏層 = 非線性特徵生成器
+   ├─ KP-S9-1.md  ← SRM 結構風險最小化
+   └─ KP-S10-1.md ← BIC 損益兩平點
+```
+
+---
+
+## 🎯 為什麼公開這兩個資料夾？
+
+**textkit-explain** 與一般教學內容的差別在於「**寫作過程本身可被學習**」：
+
+1. **KP 短稿的 6 要素結構**（一句話／類比＋對應理由／公式拆解／數值演算／主動回想／口訣＋常見誤解）是一種可遷移的寫作框架。
+   - 想寫自己的技術筆記的讀者，可以拿這 21 個 KP 當**模板**。
+2. **diagram_prompts/** 是 AI 生圖的「**文字稿**」。
+   - 想用 gpt-image-2 / Agnes / Gemini 自己畫 sketchnote 風格示意圖的讀者，
+     拿這 10 個 prompt 當**起點**，改寫成自己章節的版本。
+
+---
+
+## 📖 怎麼讀？
+
+### A. 從成品出發（給一般讀者）
+
+```
+ch5-meta/kp_drafts/S00/KP-S0-1.md   ←  對應  ch5/index.html  站 0 的 KP 區塊
+ch5-meta/diagram_prompts/KP-S0-1.md ←  對應  ch5/index.html  站 0 的示意圖佔位符
+```
+
+KP ID 的編號 `S0-1` = `站-該站第幾個`。例如 `KP-S7-3` = 站 7 的第 3 個 KP。
+
+### B. 從方法論出發（給寫作者）
+
+每個 KP 短稿的固定結構：
+
+```markdown
+# KP-S?-?｜<一句話標題>
+
+> **一句話**：<一句話定義>
+> **生活類比**：<具體情境>＋<為何對應>
+> **公式拆解**：<每個符號的意義>
+> **數值演算**：<兩個具體數字例子>
+> **主動回想**：<1 題自我測試>
+> **口訣**：<一句話記憶法>
+> **常見誤解**：<初學者最常犯的錯>
+```
+
+### C. 從工具鏈出發（給工程師）
+
+`diagram_prompts/*.md` 內的 `data-prompt` 區塊可直接餵給：
+
+- `gpt-image-2`（ChatGPT 圖像模型）
+- `Agnes 2.1 Flash`
+- `Gemini 2.5 Flash Image`（Nano Banana）
+
+產生後用 `base64 -w 0 < png` 編碼後替換 `ch5/index.html` 內的 `DIAGRAM_PLACEHOLDER`。
+
+---
+
+## ⚖️ 版權
+
+- KP 短稿與 diagram prompt 皆為本作者原創（CC BY 4.0）
+- 引用之課文／公式 / Example 數值版權屬 Theodoridis & Koutroumbas《Pattern Recognition》
+- 公開目的是**教學方法論示範**，非取代課文
+
+---
+
+## 🔗 相關連結
+
+- 成品（互動式網頁講義）：[`/ch5/`](../ch5/)
+- 入口頁：[`/`](../)
+- 課文原文：保留在本機 `ch5-textkit-explain/sources/`，**不公開**（版權考量）
