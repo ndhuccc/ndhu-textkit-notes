@@ -114,6 +114,15 @@
   .kp-block .kp-misconception > h4{color:#dc2626}
   .kp-block h3:focus,.kp-block h4:focus{outline:2px dashed var(--brand,#3b6cd1);outline-offset:2px}
 
+  /* ========== KP 課本附圖樣式 ========== */
+  .kp-block .kp-figure{margin-top:18px;padding:14px;background:#f9fafc;border:1px dashed #c4cce0;border-radius:6px}
+  .kp-block .kp-figure > h4{margin:0 0 10px 0;font-size:1rem;font-weight:600;color:#475569;display:flex;align-items:center;gap:6px}
+  .kp-block .kp-figure > h4::before{content:"";display:inline-block;width:4px;height:1em;background:#94a3b8;margin-right:6px;border-radius:2px}
+  .kp-block .kp-figure figure{margin:0 0 12px 0}
+  .kp-block .kp-figure figure:last-child{margin-bottom:0}
+  .kp-block .kp-figure img{display:block;max-width:100%;height:auto;margin:0 auto 6px auto;border:1px solid #e6e9f0;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+  .kp-block .kp-figure figcaption{font-size:.85rem;color:#64748b;text-align:center;line-height:1.4}
+
 </style>
 </head>
 <body>
@@ -216,19 +225,45 @@
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S0-1"
+        data-diag-id="diag-KP-S0-1"
+        data-prompt="A sketchnote-style flat illustration on white background with black ink lines and one accent red color. The scene shows ONE university professor at a desk distributing experiments to students. Left half: professor happily distributing 5 experiments to each of 9 students (small group), each student doing well, students raising hands confidently — labeled "N=100, l=9, N/l=11, OK". Right half: the SAME professor forced to distribute only 2 experiments to each of 50 students (large group), students looking confused and bored, professor sweating — labeled "N=100, l=50, N/l=2, students only memorize but don't understand". Between the two halves, a large red label reads "N/l is samples per parameter". Below the scene, a hand-drawn line chart showing test error vs number of features (l): y-axis "Test Error", x-axis "l", curve goes DOWN then UP forming a hill/mountain shape, minimum point marked with a red star and labeled "optimal l ~= N/alpha". Bottom caption: "Curse of Dimensionality — too many features for too few samples"."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S0-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S0-1"
+        data-diag-id="diag-KP-S0-1"
+        data-prompt="A sketchnote-style flat illustration on white background with black ink lines and one accent red color. The scene shows ONE university professor at a desk distributing experiments to students. Left half: professor happily distributing 5 experiments to each of 9 students (small group), each student doing well, students raising hands confidently — labeled "N=100, l=9, N/l=11, OK". Right half: the SAME professor forced to distribute only 2 experiments to each of 50 students (large group), students looking confused and bored, professor sweating — labeled "N=100, l=50, N/l=2, students only memorize but don't understand". Between the two halves, a large red label reads "N/l is samples per parameter". Below the scene, a hand-drawn line chart showing test error vs number of features (l): y-axis "Test Error", x-axis "l", curve goes DOWN then UP forming a hill/mountain shape, minimum point marked with a red star and labeled "optimal l ~= N/alpha". Bottom caption: "Curse of Dimensionality — too many features for too few samples"."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S0-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S0-1"
+        data-diag-id="diag-KP-S0-1"
+        data-prompt="A sketchnote-style flat illustration on white background with black ink lines and one accent red color. The scene shows ONE university professor at a desk distributing experiments to students. Left half: professor happily distributing 5 experiments to each of 9 students (small group), each student doing well, students raising hands confidently — labeled "N=100, l=9, N/l=11, OK". Right half: the SAME professor forced to distribute only 2 experiments to each of 50 students (large group), students looking confused and bored, professor sweating — labeled "N=100, l=50, N/l=2, students only memorize but don't understand". Between the two halves, a large red label reads "N/l is samples per parameter". Below the scene, a hand-drawn line chart showing test error vs number of features (l): y-axis "Test Error", x-axis "l", curve goes DOWN then UP forming a hill/mountain shape, minimum point marked with a red star and labeled "optimal l ~= N/alpha". Bottom caption: "Curse of Dimensionality — too many features for too few samples"."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S0-1（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S0 -->
 <article class="kp-block" data-kp="KP-S0-1">
   <h3 class="kp-title" id="kp-KP-S0-1">KP-S0-1｜維度詛咒與 N/l 比</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>特徵越多，模型要估的參數越多；但訓練資料 N 有限——**當 N 撐不住要估的參數數量，模型會把訓練資料的雜訊也記下…</td></tr>
-      <tr><th>類比</th><td>老師帶學生</td></tr>
-      <tr><th>公式</th><td>$N/l$</td></tr>
-      <tr><th>口訣</th><td>**樣本少，特徵就要少。看 N/l。**</td></tr>
-      <tr><th>誤解</th><td>很多人把 $N/l$ 當成「每個特徵的重要性指標」——不是。$N/l$ 是門檻指標：超過 10 …</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>特徵越多，模型要估的參數越多；但訓練資料 N 有限——**當 N 撐不住要估的參數數量，模型會把訓練資料的雜訊也記下來，預測新資料反而更糟**。這就是「維度詛咒」。</p>
@@ -275,16 +310,6 @@ $N=100, l=50$：$N/l=2$——每個學生只做 2 個實驗，**只會死背不�
 </figure>
 <article class="kp-block" data-kp="KP-S0-2">
   <h3 class="kp-title" id="kp-KP-S0-2">KP-S0-2｜選特徵的共同目標</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>所有特徵選擇方法都追求同一件事——**類間距離大、類內變異小**</td></tr>
-      <tr><th>類比</th><td>餐廳分流</td></tr>
-      <tr><th>公式</th><td>$J_3 = \operatorname{trace}\{S_w^{-1} …</td></tr>
-      <tr><th>口訣</th><td>**類間拉開、類內收緊；分子大、分母小。**</td></tr>
-      <tr><th>誤解</th><td>很多教科書把這個目標寫得很抽象——底層直覺其實很簡單：「兩群東西要分得開」。所有公式都是把這個直…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>所有特徵選擇方法都追求同一件事——**類間距離大、類內變異小**。好特徵讓不同類的特徵值離得遠、同類的聚得近。</p>
@@ -356,19 +381,45 @@ Fisher 判別比 $\mathrm{FDR} = (\mu_1-\mu_2)^2/(\sigma_1^2+\sigma_2^2)$：分�
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S1-1"
+        data-diag-id="diag-KP-S1-1"
+        data-prompt="A clean schematic line plot on white background with black axes. X-axis labeled "Number of features (l)" ranges from 0 to 30. Y-axis labeled "Test error rate" ranges from 0 to 1.0. A single smooth blue curve forms a clear U-shape (valley): starts high at l=1 (around 0.35), decreases steadily to a minimum at around l=8-10 (error ~0.08), then rises back up to about 0.30 at l=30. The minimum point is marked with a red dot and a label "OPTIMAL POINT". Three colored dots are placed at l=1, l=optimal, l=30, labeled with their error values. In the upper-right corner, a small equation box shows "l* ~= N/alpha, alpha in [2, 10]". Top title: "Peaking Phenomenon". The blue curve is bold; the rest is thin black lines."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S1-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S1-1"
+        data-diag-id="diag-KP-S1-1"
+        data-prompt="A clean schematic line plot on white background with black axes. X-axis labeled "Number of features (l)" ranges from 0 to 30. Y-axis labeled "Test error rate" ranges from 0 to 1.0. A single smooth blue curve forms a clear U-shape (valley): starts high at l=1 (around 0.35), decreases steadily to a minimum at around l=8-10 (error ~0.08), then rises back up to about 0.30 at l=30. The minimum point is marked with a red dot and a label "OPTIMAL POINT". Three colored dots are placed at l=1, l=optimal, l=30, labeled with their error values. In the upper-right corner, a small equation box shows "l* ~= N/alpha, alpha in [2, 10]". Top title: "Peaking Phenomenon". The blue curve is bold; the rest is thin black lines."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S1-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S1-1"
+        data-diag-id="diag-KP-S1-1"
+        data-prompt="A clean schematic line plot on white background with black axes. X-axis labeled "Number of features (l)" ranges from 0 to 30. Y-axis labeled "Test error rate" ranges from 0 to 1.0. A single smooth blue curve forms a clear U-shape (valley): starts high at l=1 (around 0.35), decreases steadily to a minimum at around l=8-10 (error ~0.08), then rises back up to about 0.30 at l=30. The minimum point is marked with a red dot and a label "OPTIMAL POINT". Three colored dots are placed at l=1, l=optimal, l=30, labeled with their error values. In the upper-right corner, a small equation box shows "l* ~= N/alpha, alpha in [2, 10]". Top title: "Peaking Phenomenon". The blue curve is bold; the rest is thin black lines."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S1-1（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S1 -->
 <article class="kp-block" data-kp="KP-S1-1">
   <h3 class="kp-title" id="kp-KP-S1-1">KP-S1-1｜錯誤率隨特徵數先降後升</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>固定訓練資料量下，**特徵數從 1 個往上加，測試錯誤率會先下降、加到某個臨界點後反而反升**——因為模型開始把訓練…</td></tr>
-      <tr><th>類比</th><td>做菜</td></tr>
-      <tr><th>公式</th><td>$N(+\mu, I)$</td></tr>
-      <tr><th>口訣</th><td>**特徵加太多，錯誤率反升；像一座山，別爬過頭。**</td></tr>
-      <tr><th>誤解</th><td>很多人以為「特徵越多越準」——Peaking 打臉這個直覺。錯誤率有兩個來源：訊息不足（特徵少）…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>固定訓練資料量下，**特徵數從 1 個往上加，測試錯誤率會先下降、加到某個臨界點後反而反升**——因為模型開始把訓練資料的雜訊當訊息記下來。曲線像一座先下坡後上坡的山。</p>
@@ -402,6 +453,13 @@ $l=4$：$P_e \approx 0.05$（已知均值下，錯誤率降 4 倍）
       <h4>⚠️ 常見誤解</h4>
       <p>很多人以為「特徵越多越準」——Peaking 打臉這個直覺。**錯誤率有兩個來源：訊息不足（特徵少）和雜訊過量（特徵多）**，最佳點在中間。</p>
     </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.1_peaking.jpg" alt="圖 5.1：錯誤率隨特徵數先降後升的 Peaking 現象" loading="lazy">
+        <figcaption>圖 5.1：錯誤率隨特徵數先降後升的 Peaking 現象</figcaption>
+      </figure>
+    </section>
 </article>
 <figure class="diagram-placeholder"
         data-id="KP-S1-1"
@@ -416,16 +474,6 @@ $l=4$：$P_e \approx 0.05$（已知均值下，錯誤率降 4 倍）
 </figure>
 <article class="kp-block" data-kp="KP-S1-2">
   <h3 class="kp-title" id="kp-KP-S1-2">KP-S1-2｜最低點 l $\approx$ N/$\alpha$</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>Peaking 曲線最低點（最佳特徵數）和訓練樣本數 N 有簡單的經驗關係——**$l \approx N/\alp…</td></tr>
-      <tr><th>類比</th><td>教授帶研究生</td></tr>
-      <tr><th>公式</th><td>$l = N/\alpha$</td></tr>
-      <tr><th>口訣</th><td>**$N$ 越大、特徵越多；$l \approx N/\alpha$ 是登山…</td></tr>
-      <tr><th>誤解</th><td>很多人把 $\alpha$ 當成可精確計算的常數——其實它是經驗區間。深度學習的 $\alpha…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>Peaking 曲線最低點（最佳特徵數）和訓練樣本數 N 有簡單的經驗關係——**$l \approx N/\alpha$，$\alpha$ 通常 2–10**。**樣本越多，能撐的特徵越多**。</p>
@@ -461,6 +509,13 @@ $\alpha=10 \to l=10$，$\alpha=5 \to l=20$，$\alpha=2 \to l=50$
     <section class="kp-misconception">
       <h4>⚠️ 常見誤解</h4>
       <p>很多人把 $\alpha$ 當成可精確計算的常數——其實它是經驗區間。深度學習的 $\alpha$ 遠大於線性模型（深度學習「研究生做一年」、線性「三個月就出師」）。</p>
+    </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.1_peaking.jpg" alt="圖 5.1：錯誤率隨特徵數先降後升的 Peaking 現象" loading="lazy">
+        <figcaption>圖 5.1：錯誤率隨特徵數先降後升的 Peaking 現象</figcaption>
+      </figure>
     </section>
 </article>
 
@@ -512,19 +567,45 @@ $\alpha=10 \to l=10$，$\alpha=5 \to l=20$，$\alpha=2 \to l=50$
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S2-2"
+        data-diag-id="diag-KP-S2-2"
+        data-prompt="A clean schematic on white background. Main element: a horizontal bell curve (t-distribution) drawn in light blue outline, centered at x=0, x-axis labeled "q statistic", range from -5 to +5. A central region between x=-2.10 and x=+2.10 is shaded light green and labeled "Acceptance region D=[-2.10, 2.10]". Two red dots are placed OUTSIDE the green region: one at x=+4.25 (labeled "q=4.25, Example 5.3, REJECT H0") and one at x=-4.25 (mirror, same label). Vertical dashed lines mark x=-2.10 and x=+2.10 with labels "t critical, df=18, alpha=0.05". Above the curve, an annotation reads "Beyond ±2.10 = significant difference". Below the curve, an annotation reads "Within ±2.10 = cannot reject H0". The bell curve is thin blue; the green region is light fill; the red dots are bold circles with thin black labels."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S2-2（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S2-2"
+        data-diag-id="diag-KP-S2-2"
+        data-prompt="A clean schematic on white background. Main element: a horizontal bell curve (t-distribution) drawn in light blue outline, centered at x=0, x-axis labeled "q statistic", range from -5 to +5. A central region between x=-2.10 and x=+2.10 is shaded light green and labeled "Acceptance region D=[-2.10, 2.10]". Two red dots are placed OUTSIDE the green region: one at x=+4.25 (labeled "q=4.25, Example 5.3, REJECT H0") and one at x=-4.25 (mirror, same label). Vertical dashed lines mark x=-2.10 and x=+2.10 with labels "t critical, df=18, alpha=0.05". Above the curve, an annotation reads "Beyond ±2.10 = significant difference". Below the curve, an annotation reads "Within ±2.10 = cannot reject H0". The bell curve is thin blue; the green region is light fill; the red dots are bold circles with thin black labels."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S2-2（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S2-2"
+        data-diag-id="diag-KP-S2-2"
+        data-prompt="A clean schematic on white background. Main element: a horizontal bell curve (t-distribution) drawn in light blue outline, centered at x=0, x-axis labeled "q statistic", range from -5 to +5. A central region between x=-2.10 and x=+2.10 is shaded light green and labeled "Acceptance region D=[-2.10, 2.10]". Two red dots are placed OUTSIDE the green region: one at x=+4.25 (labeled "q=4.25, Example 5.3, REJECT H0") and one at x=-4.25 (mirror, same label). Vertical dashed lines mark x=-2.10 and x=+2.10 with labels "t critical, df=18, alpha=0.05". Above the curve, an annotation reads "Beyond ±2.10 = significant difference". Below the curve, an annotation reads "Within ±2.10 = cannot reject H0". The bell curve is thin blue; the green region is light fill; the red dots are bold circles with thin black labels."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S2-2（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S2 -->
 <article class="kp-block" data-kp="KP-S2-1">
   <h3 class="kp-title" id="kp-KP-S2-1">KP-S2-1｜t-test 的 q 統計量</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>想知道「這個特徵在兩類之間的平均值差異是不是大到不像巧合」，t-test 算一個叫 $q$ 的統計量；$|q|$ 夠…</td></tr>
-      <tr><th>類比</th><td>兩位老師</td></tr>
-      <tr><th>公式</th><td>$q = \dfrac{\bar{x} - \bar{y}}{s_z \sq…</td></tr>
-      <tr><th>口訣</th><td>**$q$ 大過 ±2.10 就選中。**</td></tr>
-      <tr><th>誤解</th><td>$|q|$ 越大代表模型越準？——不。$q$ 大只說「這個特徵在兩類間差得不像巧合」，不能保證整…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>想知道「這個特徵在兩類之間的平均值差異是不是大到不像巧合」，t-test 算一個叫 $q$ 的統計量；$|q|$ 夠大就拒絕「兩類均值相同」的 $H_0$——**特徵被選中**；否則丟。</p>
@@ -563,19 +644,16 @@ $q = 0.48 / 0.1128 = 4.25$ ✓</p>
       <h4>⚠️ 常見誤解</h4>
       <p>$|q|$ 越大代表模型越準？——**不**。$q$ 大只說「這個特徵在兩類間差得不像巧合」，**不能保證整個模型準**。t-test 只回答「單特徵要不要選」，不回答「整體模型好不好」。</p>
     </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.2_hypothesis.jpg" alt="圖 5.2：假設檢定的接受區間 D 與拒絕區間 $\bar{D}$" loading="lazy">
+        <figcaption>圖 5.2：假設檢定的接受區間 D 與拒絕區間 $\bar{D}$</figcaption>
+      </figure>
+    </section>
 </article>
 <article class="kp-block" data-kp="KP-S2-2">
   <h3 class="kp-title" id="kp-KP-S2-2">KP-S2-2｜Example 5.3：q = 4.25 特徵被選中</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>把 KP-S2-1 的 t-test 套到課本 Example 5.3 具體資料上，**$q = 4.25$ 落在顯…</td></tr>
-      <tr><th>類比</th><td>食譜 vs 武俠</td></tr>
-      <tr><th>公式</th><td>$s_z^2$</td></tr>
-      <tr><th>口訣</th><td>**Example 5.3：$q=4.25$ 對 ±2.10 的關口——外頭…</td></tr>
-      <tr><th>誤解</th><td>$q$ 通過 = 特徵有用？——不。$q$ 通過只代表「兩類有顯著差異」，$q=2.2$ 也是通…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>把 KP-S2-1 的 t-test 套到課本 Example 5.3 具體資料上，**$q = 4.25$ 落在顯著區間之外，特徵被選中留下**——t-test 選特徵的標準成功案例。</p>
@@ -612,6 +690,13 @@ $s_z = 0.2523$ → $q = 0.48 / 0.1128 = 4.25$ ✓
     <section class="kp-misconception">
       <h4>⚠️ 常見誤解</h4>
       <p>$q$ 通過 = 特徵有用？——**不**。$q$ 通過只代表「兩類有顯著差異」，$q=2.2$ 也是通過，實際區辨力可能很弱。$q$ 是門檻檢定不是強度評分。</p>
+    </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.2_hypothesis.jpg" alt="圖 5.2：假設檢定的接受區間 D 與拒絕區間 $\bar{D}$" loading="lazy">
+        <figcaption>圖 5.2：假設檢定的接受區間 D 與拒絕區間 $\bar{D}$</figcaption>
+      </figure>
     </section>
 </article>
 <figure class="diagram-placeholder"
@@ -676,19 +761,45 @@ $s_z = 0.2523$ → $q = 0.48 / 0.1128 = 4.25$ ✓
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S3-1"
+        data-diag-id="diag-KP-S3-1"
+        data-prompt="A clean schematic on white background. A square plot area 400x400 pixels, x-axis labeled "False alarm rate (a)" 0 to 1, y-axis labeled "Hit rate (1-beta)" 0 to 1. Three ROC curves are drawn in the same axes: (1) a thin gray dashed diagonal line from (0,0) to (1,1) labeled "Random guess, AUC=0.5"; (2) a medium blue smooth convex curve from (0,0) curving up through (0.1, 0.7), (0.3, 0.9), (0.6, 0.95), to (1,1) labeled "Moderate, AUC=0.85"; (3) a bold red curve hugging the top-left corner from (0,0) sharply up to (0,1) then right to (1,1) labeled "Perfect, AUC=1.0". The area under the perfect curve is lightly shaded red. Small arrows point to each curve with their labels. The plot title: "ROC Curves: Better classifier = more bowed toward top-left". No grid lines except faint ones at 0, 0.5, 1.0."
+        data-style="schematic"
+        data-target-ratio="1:1">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S3-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S3-1"
+        data-diag-id="diag-KP-S3-1"
+        data-prompt="A clean schematic on white background. A square plot area 400x400 pixels, x-axis labeled "False alarm rate (a)" 0 to 1, y-axis labeled "Hit rate (1-beta)" 0 to 1. Three ROC curves are drawn in the same axes: (1) a thin gray dashed diagonal line from (0,0) to (1,1) labeled "Random guess, AUC=0.5"; (2) a medium blue smooth convex curve from (0,0) curving up through (0.1, 0.7), (0.3, 0.9), (0.6, 0.95), to (1,1) labeled "Moderate, AUC=0.85"; (3) a bold red curve hugging the top-left corner from (0,0) sharply up to (0,1) then right to (1,1) labeled "Perfect, AUC=1.0". The area under the perfect curve is lightly shaded red. Small arrows point to each curve with their labels. The plot title: "ROC Curves: Better classifier = more bowed toward top-left". No grid lines except faint ones at 0, 0.5, 1.0."
+        data-style="schematic"
+        data-target-ratio="1:1">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S3-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S3-1"
+        data-diag-id="diag-KP-S3-1"
+        data-prompt="A clean schematic on white background. A square plot area 400x400 pixels, x-axis labeled "False alarm rate (a)" 0 to 1, y-axis labeled "Hit rate (1-beta)" 0 to 1. Three ROC curves are drawn in the same axes: (1) a thin gray dashed diagonal line from (0,0) to (1,1) labeled "Random guess, AUC=0.5"; (2) a medium blue smooth convex curve from (0,0) curving up through (0.1, 0.7), (0.3, 0.9), (0.6, 0.95), to (1,1) labeled "Moderate, AUC=0.85"; (3) a bold red curve hugging the top-left corner from (0,0) sharply up to (0,1) then right to (1,1) labeled "Perfect, AUC=1.0". The area under the perfect curve is lightly shaded red. Small arrows point to each curve with their labels. The plot title: "ROC Curves: Better classifier = more bowed toward top-left". No grid lines except faint ones at 0, 0.5, 1.0."
+        data-style="schematic"
+        data-target-ratio="1:1">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S3-1（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S3 -->
 <article class="kp-block" data-kp="KP-S3-1">
   <h3 class="kp-title" id="kp-KP-S3-1">KP-S3-1｜掃閾值畫 ROC 與 AUC</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>ROC 曲線是「把分類閾值從最寬掃到最嚴，記錄假警報率 $a$ 與命中率 $1-\beta$」畫成的曲線；**曲線離…</td></tr>
-      <tr><th>類比</th><td>雷達警報</td></tr>
-      <tr><th>公式</th><td>$\mathrm{AUC} = \int_0^1 (1-\beta)(a)\…</td></tr>
-      <tr><th>口訣</th><td>**ROC 越拱越好；AUC 越接近 1 越能分。**</td></tr>
-      <tr><th>誤解</th><td>很多學生把 AUC 當成「正確率」——AUC 是所有閾值下的綜合表現，不受單一閾值影響。正確率則…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>ROC 曲線是「把分類閾值從最寬掃到最嚴，記錄假警報率 $a$ 與命中率 $1-\beta$」畫成的曲線；**曲線離對角線越遠、AUC 越大，特徵的區辨力越強**。</p>
@@ -725,6 +836,13 @@ $d=4$：AUC $\approx$ 0.99
     <section class="kp-misconception">
       <h4>⚠️ 常見誤解</h4>
       <p>很多學生把 AUC 當成「正確率」——AUC 是**所有閾值下的綜合表現**，不受單一閾值影響。正確率則是**單一閾值**的表現，不同閾值下可能差很多。</p>
+    </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.3_roc.jpg" alt="圖 5.3：ROC 曲線——門檻移動下的命中率 vs 假警報率" loading="lazy">
+        <figcaption>圖 5.3：ROC 曲線——門檻移動下的命中率 vs 假警報率</figcaption>
+      </figure>
     </section>
 </article>
 <figure class="diagram-placeholder"
@@ -787,19 +905,45 @@ $d=4$：AUC $\approx$ 0.99
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S4-2"
+        data-diag-id="diag-KP-S4-2"
+        data-prompt="A sketchnote-style illustration on white background with black ink lines and light red accent color, organized in three side-by-side panels labeled (a), (b), (c), each showing two class clusters in 2D space. Panel (a): two small tight circles (sigma=0.3) labeled "omega1" (red) and "omega2" (blue) very close together (centers 0.5 apart). Above panel (a): hand-written label "Class-in tight, class-between near" and value "J3 = 164.7". Panel (b): two large loose circles (sigma=2.0) labeled "omega1" (red) and "omega2" (blue), still close together (centers 0.5 apart), but each cluster spread out. Above panel (b): label "Class-in loose, class-between near" and "J3 = 12.5" (marked with a frown). Panel (c): two small tight circles (sigma=0.3) labeled "omega1" (red) and "omega2" (blue), far apart (centers 3.0 apart). Above panel (c): label "Class-in tight, class-between far" and "J3 = 620.9" (marked with a star). Bottom of figure: hand-written equation "J3 = trace(Sw$^{-1}$ Sm) — bigger = better separated". Use simple geometric shapes, hand-drawn style, no fancy 3D shading."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S4-2（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S4-2"
+        data-diag-id="diag-KP-S4-2"
+        data-prompt="A sketchnote-style illustration on white background with black ink lines and light red accent color, organized in three side-by-side panels labeled (a), (b), (c), each showing two class clusters in 2D space. Panel (a): two small tight circles (sigma=0.3) labeled "omega1" (red) and "omega2" (blue) very close together (centers 0.5 apart). Above panel (a): hand-written label "Class-in tight, class-between near" and value "J3 = 164.7". Panel (b): two large loose circles (sigma=2.0) labeled "omega1" (red) and "omega2" (blue), still close together (centers 0.5 apart), but each cluster spread out. Above panel (b): label "Class-in loose, class-between near" and "J3 = 12.5" (marked with a frown). Panel (c): two small tight circles (sigma=0.3) labeled "omega1" (red) and "omega2" (blue), far apart (centers 3.0 apart). Above panel (c): label "Class-in tight, class-between far" and "J3 = 620.9" (marked with a star). Bottom of figure: hand-written equation "J3 = trace(Sw$^{-1}$ Sm) — bigger = better separated". Use simple geometric shapes, hand-drawn style, no fancy 3D shading."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S4-2（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S4-2"
+        data-diag-id="diag-KP-S4-2"
+        data-prompt="A sketchnote-style illustration on white background with black ink lines and light red accent color, organized in three side-by-side panels labeled (a), (b), (c), each showing two class clusters in 2D space. Panel (a): two small tight circles (sigma=0.3) labeled "omega1" (red) and "omega2" (blue) very close together (centers 0.5 apart). Above panel (a): hand-written label "Class-in tight, class-between near" and value "J3 = 164.7". Panel (b): two large loose circles (sigma=2.0) labeled "omega1" (red) and "omega2" (blue), still close together (centers 0.5 apart), but each cluster spread out. Above panel (b): label "Class-in loose, class-between near" and "J3 = 12.5" (marked with a frown). Panel (c): two small tight circles (sigma=0.3) labeled "omega1" (red) and "omega2" (blue), far apart (centers 3.0 apart). Above panel (c): label "Class-in tight, class-between far" and "J3 = 620.9" (marked with a star). Bottom of figure: hand-written equation "J3 = trace(Sw$^{-1}$ Sm) — bigger = better separated". Use simple geometric shapes, hand-drawn style, no fancy 3D shading."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S4-2（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S4 -->
 <article class="kp-block" data-kp="KP-S4-1">
   <h3 class="kp-title" id="kp-KP-S4-1">KP-S4-1｜散佈矩陣 S_w / S_b / S_m</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>衡量「類別可分離度」需要三個矩陣——**$S_w$ 類內散佈**（每類自己有多鬆）、**$S_b$ 類間散佈**（類…</td></tr>
-      <tr><th>類比</th><td>搬家後的「客廳 vs 書房」類比</td></tr>
-      <tr><th>公式</th><td>$S_w$</td></tr>
-      <tr><th>口訣</th><td>**$S_w$ 看內、$S_b$ 看間。**</td></tr>
-      <tr><th>誤解</th><td>很多學生把 $S_b$ 想成「兩類中心點的距離」——其實 $S_b$ 是矩陣（不是純量），含每個…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>衡量「類別可分離度」需要三個矩陣——**$S_w$ 類內散佈**（每類自己有多鬆）、**$S_b$ 類間散佈**（類別彼此離多遠）、**$S_m = S_w + S_b$ 總體散佈**。</p>
@@ -835,19 +979,16 @@ $S_b = \begin{pmatrix} 2.25 & 0 \\ 0 & 0 \end{pmatrix}$，$S_m = \begin{pmatrix}
       <h4>⚠️ 常見誤解</h4>
       <p>很多學生把 $S_b$ 想成「兩類中心點的距離」——其實 $S_b$ 是**矩陣**（不是純量），含每個方向的分散。只有兩類等先驗時 $S_b$ 才退化成 $0.5 \times (\mu_1-\mu_2)(\mu_1-\mu_2)^T$。</p>
     </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.5_scatter.jpg" alt="圖 5.5：$J_3$ 散佈矩陣三種情況（a 難分 / b 最難分 / c 最好分）" loading="lazy">
+        <figcaption>圖 5.5：$J_3$ 散佈矩陣三種情況（a 難分 / b 最難分 / c 最好分）</figcaption>
+      </figure>
+    </section>
 </article>
 <article class="kp-block" data-kp="KP-S4-2">
   <h3 class="kp-title" id="kp-KP-S4-2">KP-S4-2｜J3 準則與 Example 5.5（164.7 / 12.5 / 620.9）</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>$J_3 = \operatorname{trace}\{S_w^{-1} S_m\}$ 把三個散佈矩陣壓成一個數字…</td></tr>
-      <tr><th>類比</th><td>搬家後評估可分離度</td></tr>
-      <tr><th>公式</th><td>$J_3 = \operatorname{trace}\{S_w^{-1} …</td></tr>
-      <tr><th>口訣</th><td>**$J_3$ 大 = 拉開+收緊；620.9 > 164.7 > 12.5…</td></tr>
-      <tr><th>誤解</th><td>很多學生看到 $S_w^{-1}$ 就想「反矩陣 = 倒數」——其實反矩陣不是逐元素倒數，是線性…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>$J_3 = \operatorname{trace}\{S_w^{-1} S_m\}$ 把三個散佈矩陣壓成一個數字——**$J_3$ 越大、類別越能分**。Example 5.5 用三種 2D 分布算出 $J_3 = 164.7 / 12.5 / 620.9$。</p>
@@ -888,6 +1029,13 @@ c 類內緊（$\sigma=0.3$）、類間遠（差 3.0）→ $J_3 = 620.9$
       <h4>⚠️ 常見誤解</h4>
       <p>很多學生看到 $S_w^{-1}$ 就想「反矩陣 = 倒數」——其實**反矩陣不是逐元素倒數**，是線性代數意義下的反運算。在這裡 $S_w^{-1}$ 的作用是**把 $S_w$ 的方向「拉直」**，讓 $S_m$ 在被拉直的方向上計算拉伸。</p>
     </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.5_scatter.jpg" alt="圖 5.5：$J_3$ 散佈矩陣三種情況（a 難分 / b 最難分 / c 最好分）" loading="lazy">
+        <figcaption>圖 5.5：$J_3$ 散佈矩陣三種情況（a 難分 / b 最難分 / c 最好分）</figcaption>
+      </figure>
+    </section>
 </article>
 <figure class="diagram-placeholder"
         data-id="KP-S4-2"
@@ -902,16 +1050,6 @@ c 類內緊（$\sigma=0.3$）、類間遠（差 3.0）→ $J_3 = 620.9$
 </figure>
 <article class="kp-block" data-kp="KP-S4-3">
   <h3 class="kp-title" id="kp-KP-S4-3">KP-S4-3｜Fisher 判別比 FDR（一維版）</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>$J_3$ 太複雜</td></tr>
-      <tr><th>類比</th><td>身高區分男女</td></tr>
-      <tr><th>公式</th><td>$\mathrm{FDR} = (\mu_1-\mu_2)^2/(\sigm…</td></tr>
-      <tr><th>口訣</th><td>**FDR 越大越能分；分子差平方、分母變異和。**</td></tr>
-      <tr><th>誤解</th><td>很多學生把 FDR 當成「機率」或「相關係數」——FDR 是個比值（無單位），不是機率（0–1 …</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>$J_3$ 太複雜？**一維特徵的簡化版叫 FDR**——$\mathrm{FDR} = (\mu_1-\mu_2)^2/(\sigma_1^2+\sigma_2^2)$。**分子（類間差平方）大、分母（類內變異和）小、FDR 越大、越能分**。</p>
@@ -944,6 +1082,13 @@ FDR > 1 表示「平均差比典型變異大」——區辨力不錯</p>
     <section class="kp-misconception">
       <h4>⚠️ 常見誤解</h4>
       <p>很多學生把 FDR 當成「機率」或「相關係數」——FDR 是個**比值**（無單位），不是機率（0–1 之間），也不是相關係數（-1 到 +1）。FDR > 1 完全可以，表示「類間差比典型變異大」；FDR < 1 表示「區辨力弱」。</p>
+    </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.6_fisher.jpg" alt="圖 5.6：Fisher LDA 在 2D 空間的投影方向" loading="lazy">
+        <figcaption>圖 5.6：Fisher LDA 在 2D 空間的投影方向</figcaption>
+      </figure>
     </section>
 </article>
 
@@ -995,19 +1140,45 @@ FDR > 1 表示「平均差比典型變異大」——區辨力不錯</p>
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S5-1"
+        data-diag-id="diag-KP-S5-1"
+        data-prompt="A clean horizontal flow diagram on white background showing 4 sequential steps of the Sequential Forward Selection (SFS) algorithm. From left to right, four large rounded rectangles labeled "Step 1", "Step 2", "Step 3", "Step 4". Each rectangle contains: the selected feature number, the cumulative criterion value, and a small bar chart of the 8 candidate features with the selected one highlighted in red. Step 1: "Select f1 (FDR=0.71), J=0.71". Step 2: "Select f0 (FDR=0.54), J=1.25". Step 3: "Select f2 (FDR=0.37), J=1.62". Step 4: "Select f6 (FDR=0.01, noise!), J=1.63" — this last step has a small warning icon (⚠) next to the rectangle. Arrows connect the steps left to right. Above the flow, a title: "SFS: greedy, never backtracks". Below the flow, a note: "After 3 useful features, SFS may pick a noise feature as the 4th — floating search fixes this". The schematic should use thin black lines with red highlight for selected features. No 3D, flat design."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S5-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S5-1"
+        data-diag-id="diag-KP-S5-1"
+        data-prompt="A clean horizontal flow diagram on white background showing 4 sequential steps of the Sequential Forward Selection (SFS) algorithm. From left to right, four large rounded rectangles labeled "Step 1", "Step 2", "Step 3", "Step 4". Each rectangle contains: the selected feature number, the cumulative criterion value, and a small bar chart of the 8 candidate features with the selected one highlighted in red. Step 1: "Select f1 (FDR=0.71), J=0.71". Step 2: "Select f0 (FDR=0.54), J=1.25". Step 3: "Select f2 (FDR=0.37), J=1.62". Step 4: "Select f6 (FDR=0.01, noise!), J=1.63" — this last step has a small warning icon (⚠) next to the rectangle. Arrows connect the steps left to right. Above the flow, a title: "SFS: greedy, never backtracks". Below the flow, a note: "After 3 useful features, SFS may pick a noise feature as the 4th — floating search fixes this". The schematic should use thin black lines with red highlight for selected features. No 3D, flat design."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S5-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S5-1"
+        data-diag-id="diag-KP-S5-1"
+        data-prompt="A clean horizontal flow diagram on white background showing 4 sequential steps of the Sequential Forward Selection (SFS) algorithm. From left to right, four large rounded rectangles labeled "Step 1", "Step 2", "Step 3", "Step 4". Each rectangle contains: the selected feature number, the cumulative criterion value, and a small bar chart of the 8 candidate features with the selected one highlighted in red. Step 1: "Select f1 (FDR=0.71), J=0.71". Step 2: "Select f0 (FDR=0.54), J=1.25". Step 3: "Select f2 (FDR=0.37), J=1.62". Step 4: "Select f6 (FDR=0.01, noise!), J=1.63" — this last step has a small warning icon (⚠) next to the rectangle. Arrows connect the steps left to right. Above the flow, a title: "SFS: greedy, never backtracks". Below the flow, a note: "After 3 useful features, SFS may pick a noise feature as the 4th — floating search fixes this". The schematic should use thin black lines with red highlight for selected features. No 3D, flat design."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S5-1（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S5 -->
 <article class="kp-block" data-kp="KP-S5-1">
   <h3 class="kp-title" id="kp-KP-S5-1">KP-S5-1｜SFS：每步加最強的特徵</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>SFS（Sequential Forward Selection）=**每一步把「目前還沒選、加入後準則函數增最多」…</td></tr>
-      <tr><th>類比</th><td>組隊打比賽</td></tr>
-      <tr><th>公式</th><td>$S_0 = \emptyset$</td></tr>
-      <tr><th>口訣</th><td>**SFS：每步加最優，不回頭；卡局部最優是常態。**</td></tr>
-      <tr><th>誤解</th><td>很多學生以為 SFS 「每步加最強」就保證選到最優子集——不保證。SFS 是貪婪的局部搜尋，第一…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>SFS（Sequential Forward Selection）=**每一步把「目前還沒選、加入後準則函數增最多」的那個特徵加進來**。簡單、穩定，但只進不退，可能卡局部最優。</p>
@@ -1060,16 +1231,6 @@ step 4：選 f6（FDR=0.01，**雜訊**！前 3 個選完，被迫選次高）
 </figure>
 <article class="kp-block" data-kp="KP-S5-2">
   <h3 class="kp-title" id="kp-KP-S5-2">KP-S5-2｜浮動搜索：加了還能退</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>浮動搜索（Sequential Floating Search）= SFS 進階版——**加了特徵後，若移除某個已選…</td></tr>
-      <tr><th>類比</th><td>組隊打比賽的進階類比</td></tr>
-      <tr><th>公式</th><td>$k$</td></tr>
-      <tr><th>口訣</th><td>**浮動搜索：加一步、退一步；進得去也出得來。**</td></tr>
-      <tr><th>誤解</th><td>很多學生以為浮動搜索「保證」能找到最優子集——不保證。浮動只是把 SFS 的單向鎖死放鬆成「進退…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>浮動搜索（Sequential Floating Search）= SFS 進階版——**加了特徵後，若移除某個已選特徵能提升準則，就退掉它**。「進得去、出得來」避免卡局部最優。</p>
@@ -1156,19 +1317,45 @@ step 4：選 f6（$J=1.63$）
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S6-1"
+        data-diag-id="diag-KP-S6-1"
+        data-prompt=""
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S6-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S6-1"
+        data-diag-id="diag-KP-S6-1"
+        data-prompt=""
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S6-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S6-1"
+        data-diag-id="diag-KP-S6-1"
+        data-prompt=""
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S6-1（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S6 -->
 <article class="kp-block" data-kp="KP-S6-1">
   <h3 class="kp-title" id="kp-KP-S6-1">KP-S6-1｜Fisher 方向 w = S_w^{-1}($\mu$1−$\mu$2)</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>Fisher LDA 把高維沿一條線投影，**$w = S_w^{-1}(\mu_1-\mu_2)$**——沿這條線…</td></tr>
-      <tr><th>類比</th><td>壓克力板打光</td></tr>
-      <tr><th>公式</th><td>$w$</td></tr>
-      <tr><th>口訣</th><td>**$w = S_w^{-1}(\mu_1-\mu_2)$——壓平相關、留下…</td></tr>
-      <tr><th>誤解</th><td>很多學生把 $S_w^{-1}(\mu_1-\mu_2)$ 想成「先算差、再乘」——其實矩陣乘法…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>Fisher LDA 把高維沿一條線投影，**$w = S_w^{-1}(\mu_1-\mu_2)$**——沿這條線投影後，兩類分得最開。</p>
@@ -1198,6 +1385,13 @@ step 4：選 f6（$J=1.63$）
     <section class="kp-misconception">
       <h4>⚠️ 常見誤解</h4>
       <p>很多學生把 $S_w^{-1}(\mu_1-\mu_2)$ 想成「先算差、再乘」——其實**矩陣乘法順序敏感**，$S_w^{-1}(\mu_1-\mu_2)$ 和 $(\mu_1-\mu_2)S_w^{-1}$ 是不同向量。Fisher 用前者（先壓平、後取方向）。</p>
+    </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.7_projection.jpg" alt="圖 5.7：投影到錯誤方向導致類別重疊" loading="lazy">
+        <figcaption>圖 5.7：投影到錯誤方向導致類別重疊</figcaption>
+      </figure>
     </section>
 </article>
 <figure class="diagram-placeholder"
@@ -1271,19 +1465,45 @@ step 4：選 f6（$J=1.63$）
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S7-1"
+        data-diag-id="diag-KP-S7-1"
+        data-prompt="A clean horizontal flow diagram on white background showing 3 sequential preprocessing steps connected by arrows. Step 1 (left, labeled "1. Outlier Removal"): a scatter plot with most points clustered normally plus 3 red dots far from the cluster (representing outliers at z-score > 3), with a red "X" over the outliers and an arrow leading to Step 2. Step 2 (middle, labeled "2. Normalization"): two mini histograms side by side: left shows raw data with different scales (e.g., one tall thin bar at 100, another short wide bar at 0.5), right shows normalized data with both bars at similar height (z-score or min-max). Arrow to Step 3. Step 3 (right, labeled "3. Missing Value Imputation"): a data table with 3 cells marked "NaN" in red, and a green arrow showing those cells filled with median values. Below the whole flow, a single-line caption: "Clean -> Normalize -> Impute -> Train". Use thin black lines with red for "before" states, green for "after" states. Flat 2D design, no 3D."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S7-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S7-1"
+        data-diag-id="diag-KP-S7-1"
+        data-prompt="A clean horizontal flow diagram on white background showing 3 sequential preprocessing steps connected by arrows. Step 1 (left, labeled "1. Outlier Removal"): a scatter plot with most points clustered normally plus 3 red dots far from the cluster (representing outliers at z-score > 3), with a red "X" over the outliers and an arrow leading to Step 2. Step 2 (middle, labeled "2. Normalization"): two mini histograms side by side: left shows raw data with different scales (e.g., one tall thin bar at 100, another short wide bar at 0.5), right shows normalized data with both bars at similar height (z-score or min-max). Arrow to Step 3. Step 3 (right, labeled "3. Missing Value Imputation"): a data table with 3 cells marked "NaN" in red, and a green arrow showing those cells filled with median values. Below the whole flow, a single-line caption: "Clean -> Normalize -> Impute -> Train". Use thin black lines with red for "before" states, green for "after" states. Flat 2D design, no 3D."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S7-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S7-1"
+        data-diag-id="diag-KP-S7-1"
+        data-prompt="A clean horizontal flow diagram on white background showing 3 sequential preprocessing steps connected by arrows. Step 1 (left, labeled "1. Outlier Removal"): a scatter plot with most points clustered normally plus 3 red dots far from the cluster (representing outliers at z-score > 3), with a red "X" over the outliers and an arrow leading to Step 2. Step 2 (middle, labeled "2. Normalization"): two mini histograms side by side: left shows raw data with different scales (e.g., one tall thin bar at 100, another short wide bar at 0.5), right shows normalized data with both bars at similar height (z-score or min-max). Arrow to Step 3. Step 3 (right, labeled "3. Missing Value Imputation"): a data table with 3 cells marked "NaN" in red, and a green arrow showing those cells filled with median values. Below the whole flow, a single-line caption: "Clean -> Normalize -> Impute -> Train". Use thin black lines with red for "before" states, green for "after" states. Flat 2D design, no 3D."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S7-1（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S7 -->
 <article class="kp-block" data-kp="KP-S7-1">
   <h3 class="kp-title" id="kp-KP-S7-1">KP-S7-1｜離群值移除（z-score > 3）</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>**離群值 = 跟其他樣本差太多的點**</td></tr>
-      <tr><th>類比</th><td>家庭身高類比</td></tr>
-      <tr><th>公式</th><td>$z = (x-\bar{x})/\hat\sigma$</td></tr>
-      <tr><th>口訣</th><td>**z-score > 3 視為離群。**</td></tr>
-      <tr><th>誤解</th><td>很多學生把「離群值 = 錯誤值」——不是。離群值可能是真實的罕見值（如 NBA 球員身高），只是…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>**離群值 = 跟其他樣本差太多的點**。常見定義：$|z| = |(x-\bar{x})/\hat\sigma| > 3$（z-score 超 ±3）就移除。離群值會把平均/變異拉歪，誤導後續 t-test 與散佈矩陣。</p>
@@ -1331,16 +1551,6 @@ $|z|$ 對 3 離群：4.76、4.58、5.60——**全 > 3，移除**
 </figure>
 <article class="kp-block" data-kp="KP-S7-2">
   <h3 class="kp-title" id="kp-KP-S7-2">KP-S7-2｜正規化（min-max / z-score）</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>**特徵尺度可能差很多（身高 cm vs 體重 kg）——不處理會讓尺度大的特徵支配模型**</td></tr>
-      <tr><th>類比</th><td>比較家具價值</td></tr>
-      <tr><th>公式</th><td>$x' = (x - x_{\min})/(x_{\max} - x_{\m…</td></tr>
-      <tr><th>口訣</th><td>**尺度不同先正規化。**</td></tr>
-      <tr><th>誤解</th><td>很多學生把「正規化」和「標準化」混用——不完全相同。正規化 (normalization) 通常…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>**特徵尺度可能差很多（身高 cm vs 體重 kg）——不處理會讓尺度大的特徵支配模型**。兩種標準化：min-max（壓 [0,1]）、z-score（減平均除標準差）。</p>
@@ -1377,16 +1587,6 @@ z-score：$\bar{x}=172.5, \hat\sigma\approx 6.45$ → [-1.16, -0.39, 0.39, 1.16]
 </article>
 <article class="kp-block" data-kp="KP-S7-3">
   <h3 class="kp-title" id="kp-KP-S7-3">KP-S7-3｜缺值填補（中位數）</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>**真實資料常有 NaN**——直接丟有資料的列會浪費、留 NaN 會讓很多演算法直接炸</td></tr>
-      <tr><th>類比</th><td>家人問「你這輛車能載幾公斤？」</td></tr>
-      <tr><th>公式</th><td>$\tilde{x}_{\text{miss}} = \operatorna…</td></tr>
-      <tr><th>口訣</th><td>**缺值用中位數；類別用眾數；數值才用平均。**</td></tr>
-      <tr><th>誤解</th><td>很多學生以為「NaN = 0」——不。NaN 是「未知」，不是「零」。填 0 會把「沒測到」誤判…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>**真實資料常有 NaN**——直接丟有資料的列會浪費、留 NaN 會讓很多演算法直接炸。常用中位數填補（比平均數更抗離群）。</p>
@@ -1448,19 +1648,42 @@ z-score：$\bar{x}=172.5, \hat\sigma\approx 6.45$ → [-1.16, -0.39, 0.39, 1.16]
     <span class="diag-label">diag-KP-S8-1（示意圖待生成）</span>
   </div>
 </figure>
+<figure class="diagram-placeholder"
+        data-id="KP-S8-1"
+        data-diag-id="diag-KP-S8-1"
+        data-prompt="A sketchnote-style flow diagram on white background with black ink lines and one accent red color. Compare two parallel flows stacked vertically. Top flow labeled "Traditional ML (manual features)": boxes connected by arrows: [Raw data] -> [Hand-crafted features (HOG, SIFT)] -> [Classifier]. Each box has a small hand icon on it, indicating "human picks the features". Bottom flow labeled "Deep Learning (automatic features)": [Raw data] -> [Hidden layers (neural network)] -> [Output prediction]. The hidden layers box is shaded red and labeled "auto-learned features", with a small robot/gear icon. Between the two flows, a large hand-drawn arrow with label "Hidden layers = automatic feature engineering". At the bottom, a single-line summary: "Traditional: human designs features -> DL: network learns them". Use simple geometric shapes, hand-drawn style with slight imperfections, no 3D shading."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S8-1（示意圖待生成）</span>
+  </div>
+</figure>
+<figure class="diagram-placeholder"
+        data-id="KP-S8-1"
+        data-diag-id="diag-KP-S8-1"
+        data-prompt="A sketchnote-style flow diagram on white background with black ink lines and one accent red color. Compare two parallel flows stacked vertically. Top flow labeled "Traditional ML (manual features)": boxes connected by arrows: [Raw data] -> [Hand-crafted features (HOG, SIFT)] -> [Classifier]. Each box has a small hand icon on it, indicating "human picks the features". Bottom flow labeled "Deep Learning (automatic features)": [Raw data] -> [Hidden layers (neural network)] -> [Output prediction]. The hidden layers box is shaded red and labeled "auto-learned features", with a small robot/gear icon. Between the two flows, a large hand-drawn arrow with label "Hidden layers = automatic feature engineering". At the bottom, a single-line summary: "Traditional: human designs features -> DL: network learns them". Use simple geometric shapes, hand-drawn style with slight imperfections, no 3D shading."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S8-1（示意圖待生成）</span>
+  </div>
+</figure>
+<figure class="diagram-placeholder"
+        data-id="KP-S8-1"
+        data-diag-id="diag-KP-S8-1"
+        data-prompt="A sketchnote-style flow diagram on white background with black ink lines and one accent red color. Compare two parallel flows stacked vertically. Top flow labeled "Traditional ML (manual features)": boxes connected by arrows: [Raw data] -> [Hand-crafted features (HOG, SIFT)] -> [Classifier]. Each box has a small hand icon on it, indicating "human picks the features". Bottom flow labeled "Deep Learning (automatic features)": [Raw data] -> [Hidden layers (neural network)] -> [Output prediction]. The hidden layers box is shaded red and labeled "auto-learned features", with a small robot/gear icon. Between the two flows, a large hand-drawn arrow with label "Hidden layers = automatic feature engineering". At the bottom, a single-line summary: "Traditional: human designs features -> DL: network learns them". Use simple geometric shapes, hand-drawn style with slight imperfections, no 3D shading."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S8-1（示意圖待生成）</span>
+  </div>
+</figure>
 <!-- KP blocks for station S8 -->
 <article class="kp-block" data-kp="KP-S8-1">
   <h3 class="kp-title" id="kp-KP-S8-1">KP-S8-1｜隱藏層＝非線性特徵生成器</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>**神經網路隱藏層本質上在做「非線性特徵生成」**——把原始輸入變成新特徵，再交給輸出層分類</td></tr>
-      <tr><th>類比</th><td>組隊分工</td></tr>
-      <tr><th>公式</th><td>$y = f(\sum w_i x_i + b)$</td></tr>
-      <tr><th>口訣</th><td>**隱藏層 = 自動特徵工程師。**</td></tr>
-      <tr><th>誤解</th><td>很多學生以為「隱藏層神經元越多越好」——不是。太多神經元 = 過擬合（呼應 Peaking 站 …</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>**神經網路隱藏層本質上在做「非線性特徵生成」**——把原始輸入變成新特徵，再交給輸出層分類。隱藏層神經元數 = 學到的特徵數。</p>
@@ -1537,19 +1760,45 @@ z-score：$\bar{x}=172.5, \hat\sigma\approx 6.45$ → [-1.16, -0.39, 0.39, 1.16]
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S9-1"
+        data-diag-id="diag-KP-S9-1"
+        data-prompt="A clean schematic on white background showing a U-shaped curve. X-axis labeled "Model complexity (VC dimension, log scale)" from 0 to 10. Y-axis labeled "Generalization error" from 0 to 1.0. Three curves are drawn: (1) a thin gray dashed curve labeled "Empirical error (training)" that monotonically DECREASES from upper-left to lower-right, approaching 0 at high complexity; (2) a thin gray dashed curve labeled "Complexity penalty" that monotonically INCREASES from 0 at low complexity to about 0.8 at high complexity; (3) a BOLD red curve labeled "Generalization error (sum)" that forms a clear U-shape: starts high at low complexity (~0.7), drops to a minimum around complexity=3-4 (error ~0.15), then rises back to about 0.4 at high complexity. The minimum point of the red curve is marked with a red dot and labeled "SRM optimum". Vertical dashed lines connect the minimum to the x-axis. Top title: "Structural Risk Minimization (SRM)". Bottom annotation: "SRM picks the complexity that minimizes training + penalty, not just training error". Use thin lines, the red curve bold, the rest thin and gray."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S9-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S9-1"
+        data-diag-id="diag-KP-S9-1"
+        data-prompt="A clean schematic on white background showing a U-shaped curve. X-axis labeled "Model complexity (VC dimension, log scale)" from 0 to 10. Y-axis labeled "Generalization error" from 0 to 1.0. Three curves are drawn: (1) a thin gray dashed curve labeled "Empirical error (training)" that monotonically DECREASES from upper-left to lower-right, approaching 0 at high complexity; (2) a thin gray dashed curve labeled "Complexity penalty" that monotonically INCREASES from 0 at low complexity to about 0.8 at high complexity; (3) a BOLD red curve labeled "Generalization error (sum)" that forms a clear U-shape: starts high at low complexity (~0.7), drops to a minimum around complexity=3-4 (error ~0.15), then rises back to about 0.4 at high complexity. The minimum point of the red curve is marked with a red dot and labeled "SRM optimum". Vertical dashed lines connect the minimum to the x-axis. Top title: "Structural Risk Minimization (SRM)". Bottom annotation: "SRM picks the complexity that minimizes training + penalty, not just training error". Use thin lines, the red curve bold, the rest thin and gray."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S9-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S9-1"
+        data-diag-id="diag-KP-S9-1"
+        data-prompt="A clean schematic on white background showing a U-shaped curve. X-axis labeled "Model complexity (VC dimension, log scale)" from 0 to 10. Y-axis labeled "Generalization error" from 0 to 1.0. Three curves are drawn: (1) a thin gray dashed curve labeled "Empirical error (training)" that monotonically DECREASES from upper-left to lower-right, approaching 0 at high complexity; (2) a thin gray dashed curve labeled "Complexity penalty" that monotonically INCREASES from 0 at low complexity to about 0.8 at high complexity; (3) a BOLD red curve labeled "Generalization error (sum)" that forms a clear U-shape: starts high at low complexity (~0.7), drops to a minimum around complexity=3-4 (error ~0.15), then rises back to about 0.4 at high complexity. The minimum point of the red curve is marked with a red dot and labeled "SRM optimum". Vertical dashed lines connect the minimum to the x-axis. Top title: "Structural Risk Minimization (SRM)". Bottom annotation: "SRM picks the complexity that minimizes training + penalty, not just training error". Use thin lines, the red curve bold, the rest thin and gray."
+        data-style="schematic"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S9-1（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S9 -->
 <article class="kp-block" data-kp="KP-S9-1">
   <h3 class="kp-title" id="kp-KP-S9-1">KP-S9-1｜結構風險最小化 SRM</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>**泛化誤差 = 經驗誤差 + 複雜度懲罰**</td></tr>
-      <tr><th>類比</th><td>組隊報名考試</td></tr>
-      <tr><th>公式</th><td>$\approx$</td></tr>
-      <tr><th>口訣</th><td>**泛化 = 經驗 + 複雜度懲罰。**</td></tr>
-      <tr><th>誤解</th><td>很多學生以為「訓練誤差越小、模型越好」——SRM 警告不是。模型複雜度會漲（神經元變多、深層網路…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>**泛化誤差 = 經驗誤差 + 複雜度懲罰**。SRM 在兩者間找平衡——不是「訓練誤差越小越好」，而是「**訓練誤差 + 模型複雜度**總和越小越好」。</p>
@@ -1582,6 +1831,13 @@ z-score：$\bar{x}=172.5, \hat\sigma\approx 6.45$ → [-1.16, -0.39, 0.39, 1.16]
       <h4>⚠️ 常見誤解</h4>
       <p>很多學生以為「訓練誤差越小、模型越好」——SRM 警告**不是**。模型複雜度會漲（神經元變多、深層網路），**複雜度懲罰也漲**。總和才是泛化誤差——盲目壓低訓練誤差，可能讓總和變高（過擬合）。**「先看看驗證集誤差再決定複雜度」是 SRM 的實務版**。</p>
     </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.9_srm_tradeoff.jpg" alt="圖 5.9：SRM 在經驗誤差與複雜度懲罰間的權衡" loading="lazy">
+        <figcaption>圖 5.9：SRM 在經驗誤差與複雜度懲罰間的權衡</figcaption>
+      </figure>
+    </section>
 </article>
 <figure class="diagram-placeholder"
         data-id="KP-S9-1"
@@ -1596,16 +1852,6 @@ z-score：$\bar{x}=172.5, \hat\sigma\approx 6.45$ → [-1.16, -0.39, 0.39, 1.16]
 </figure>
 <article class="kp-block" data-kp="KP-S9-2">
   <h3 class="kp-title" id="kp-KP-S9-2">KP-S9-2｜SVM 與 VC 維度</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>**SVM 用最大化邊距（margin）控制模型複雜度**——即使特徵維度 $l$ 很高，只要資料被一個「胖邊距」分…</td></tr>
-      <tr><th>類比</th><td>兩家餐廳隔河</td></tr>
-      <tr><th>公式</th><td>$V_c \le \min(r^2 c, l) + 1$</td></tr>
-      <tr><th>口訣</th><td>**SVM 用邊距控制複雜度；$V_c$ 跟 $l$ 脫鉤。**</td></tr>
-      <tr><th>誤解</th><td>很多學生以為「SVM 只能分線性可分的資料」——不。SVM 用核函數 (kernel) 可以處理…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>**SVM 用最大化邊距（margin）控制模型複雜度**——即使特徵維度 $l$ 很高，只要資料被一個「胖邊距」分開，VC 維度 $V_c$ 就小、泛化就好。</p>
@@ -1637,6 +1883,13 @@ $V_c \le \min(9 \times 10, 2) + 1 = 3$（$l=2$ 是瓶頸）
     <section class="kp-misconception">
       <h4>⚠️ 常見誤解</h4>
       <p>很多學生以為「SVM 只能分線性可分的資料」——**不**。SVM 用**核函數 (kernel)** 可以處理非線性資料，常見的有 RBF kernel、polynomial kernel。**SVM + kernel = 在高維空間找線性分割**，回到原空間就變成非線性分割。這是 SVM 強大的關鍵。</p>
+    </section>
+    <section class="kp-figure">
+      <h4>🖼 課本附圖</h4>
+      <figure>
+        <img src="assets/fig5.8_srm.jpg" alt="圖 5.8：SRM 結構風險最小化的概念圖" loading="lazy">
+        <figcaption>圖 5.8：SRM 結構風險最小化的概念圖</figcaption>
+      </figure>
     </section>
 </article>
 </section>
@@ -1679,19 +1932,45 @@ $V_c \le \min(9 \times 10, 2) + 1 = 3$（$l=2$ 是瓶頸）
   </div>
 </figure>
 
+<figure class="diagram-placeholder"
+        data-id="KP-S10-1"
+        data-diag-id="diag-KP-S10-1"
+        data-prompt="A sketchnote-style illustration on white background with black ink lines and one accent red color. Three vertical "invoice cards" side by side labeled "A (Simple)", "B (Lavish)", "C (Bloated)". Each card is a hand-drawn receipt. Card A shows: header "Sherlock Inc.", item "-2 ln L = 300 (compensation)", item "k ln N = 9.21 (consultants)", total "BIC = 309.21" with a small checkmark below indicating "hired". Card B shows: "-2 ln L = 260", "k ln N = 13.82", total "BIC = 273.82" with a BIG red star and the word "BEST" — this card is highlighted with a red border. Card C shows: "-2 ln L = 296", "k ln N = 13.82", total "BIC = 309.82" with a small "X" below indicating "fired". Below all three cards, a hand-drawn line: "N=100, ln 100 = 4.605". At the very bottom, the equation "BIC = -2 ln L + k ln N" is written large, with "-2 ln L" circled in red and labeled "lower = better fit" and "k ln N" circled in red and labeled "lower = fewer parameters". Use sketchy, hand-drawn aesthetic, slight imperfections, no 3D."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S10-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S10-1"
+        data-diag-id="diag-KP-S10-1"
+        data-prompt="A sketchnote-style illustration on white background with black ink lines and one accent red color. Three vertical "invoice cards" side by side labeled "A (Simple)", "B (Lavish)", "C (Bloated)". Each card is a hand-drawn receipt. Card A shows: header "Sherlock Inc.", item "-2 ln L = 300 (compensation)", item "k ln N = 9.21 (consultants)", total "BIC = 309.21" with a small checkmark below indicating "hired". Card B shows: "-2 ln L = 260", "k ln N = 13.82", total "BIC = 273.82" with a BIG red star and the word "BEST" — this card is highlighted with a red border. Card C shows: "-2 ln L = 296", "k ln N = 13.82", total "BIC = 309.82" with a small "X" below indicating "fired". Below all three cards, a hand-drawn line: "N=100, ln 100 = 4.605". At the very bottom, the equation "BIC = -2 ln L + k ln N" is written large, with "-2 ln L" circled in red and labeled "lower = better fit" and "k ln N" circled in red and labeled "lower = fewer parameters". Use sketchy, hand-drawn aesthetic, slight imperfections, no 3D."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S10-1（示意圖待生成）</span>
+  </div>
+</figure>
+
+<figure class="diagram-placeholder"
+        data-id="KP-S10-1"
+        data-diag-id="diag-KP-S10-1"
+        data-prompt="A sketchnote-style illustration on white background with black ink lines and one accent red color. Three vertical "invoice cards" side by side labeled "A (Simple)", "B (Lavish)", "C (Bloated)". Each card is a hand-drawn receipt. Card A shows: header "Sherlock Inc.", item "-2 ln L = 300 (compensation)", item "k ln N = 9.21 (consultants)", total "BIC = 309.21" with a small checkmark below indicating "hired". Card B shows: "-2 ln L = 260", "k ln N = 13.82", total "BIC = 273.82" with a BIG red star and the word "BEST" — this card is highlighted with a red border. Card C shows: "-2 ln L = 296", "k ln N = 13.82", total "BIC = 309.82" with a small "X" below indicating "fired". Below all three cards, a hand-drawn line: "N=100, ln 100 = 4.605". At the very bottom, the equation "BIC = -2 ln L + k ln N" is written large, with "-2 ln L" circled in red and labeled "lower = better fit" and "k ln N" circled in red and labeled "lower = fewer parameters". Use sketchy, hand-drawn aesthetic, slight imperfections, no 3D."
+        data-style="sketchnote"
+        data-target-ratio="16:9">
+  <div class="diag-skeleton">
+    <span class="diag-icon">🖼️</span>
+    <span class="diag-label">diag-KP-S10-1（示意圖待生成）</span>
+  </div>
+</figure>
+
 <!-- KP blocks for station S10 -->
 <article class="kp-block" data-kp="KP-S10-1">
   <h3 class="kp-title" id="kp-KP-S10-1">KP-S10-1｜BIC 公式：賠償金 + 顧問費</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>**BIC = -2lnL + k·lnN**——一張帳單，**金額越低、性價比越好**</td></tr>
-      <tr><th>類比</th><td>福爾摩斯事務所請款單</td></tr>
-      <tr><th>公式</th><td>$\mathrm{BIC} = -2\ln L + k\ln N$</td></tr>
-      <tr><th>口訣</th><td>**BIC 是帳單，越省越好；參數是員工，能不雇就不雇。**</td></tr>
-      <tr><th>誤解</th><td>很多學生把 BIC 跟 AIC 搞混——BIC 的懲罰是 $k\ln N$、AIC 的懲罰是 $…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>**BIC = -2lnL + k·lnN**——一張帳單，**金額越低、性價比越好**。**-2lnL** 是「解釋不通的賠償金」，**k·lnN** 是「參數的顧問費」。我們要挑 BIC 最小的模型。</p>
@@ -1742,16 +2021,6 @@ B 多付 4.61、把賠償金砍 40——**賺**。C 一樣多付、只降 4—�
 </figure>
 <article class="kp-block" data-kp="KP-S10-2">
   <h3 class="kp-title" id="kp-KP-S10-2">KP-S10-2｜損益兩平點：每加一個參數需提升 ln L ≥ (ln N)/2</h3>
-  <table class="kp-summary">
-    <thead><tr><th>項目</th><th>內容</th></tr></thead>
-    <tbody>
-      <tr><th>一句話</th><td>BIC 給了一個**損益兩平條件**——**多雇一個參數（k+1），$\ln L$ 至少要提升 $\ln N/2$ …</td></tr>
-      <tr><th>類比</th><td>事務所加聘偵探</td></tr>
-      <tr><th>公式</th><td>$\Delta(-2\ln L) = \Delta(k\ln N)$</td></tr>
-      <tr><th>口訣</th><td>**每加一個參數要貢獻 ≥ $\ln N/2$。**</td></tr>
-      <tr><th>誤解</th><td>很多學生把 BIC 損益兩平當成「加參數一定要大幅改善」——不。$\ln N/2$ 是邊際貢獻的…</td></tr>
-    </tbody>
-  </table>
     <section class="kp-oneliner">
       <h4>💡 一句話</h4>
       <p>BIC 給了一個**損益兩平條件**——**多雇一個參數（k+1），$\ln L$ 至少要提升 $\ln N/2$ 才划算**。少於這個提升就是「多花錢、少做事」，被淘汰。</p>
